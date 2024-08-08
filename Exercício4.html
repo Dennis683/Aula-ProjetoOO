@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h1>Escolha uma das cores: vermelho, azul, verde, amarelo ou roxo</h1>
+    <p>Digite uma cor: <input type="number" id="numeroInput" /></p>
+    <button onclick="verificarIntervalo()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarIntervalo() {
+            // Obtém o valor digitado pelo usuário
+            let numero = String;
+
+            // Verifica em qual intervalo o número se encontra usando switch
+            let mensagem;
+
+            switch (true) {
+                case (numero == 'Vermelho'):
+                    mensagem = "Red";
+                    break;
+                case (numero == 'Azul'):
+                    mensagem = "Blue";
+                    break;
+                case (numero == 'Amarelo'):
+                    mensagem = "Yellow";
+                    break;
+                case (numero == 'Roxo'):
+                    mensagem = "Purple";
+                    break;
+                case (numero == 'Verde'):
+                    mensagem = "Green";
+                    break;
+                default:
+                    mensagem = "Entrada inválida. Por favor digite um número entre 1 e 12.";
+            }
+
+            // Exibe a mensagem no corpo da página
+            document.getElementById("resultado").textContent = mensagem;
+        }
+    </script>
+</body>
+</html>

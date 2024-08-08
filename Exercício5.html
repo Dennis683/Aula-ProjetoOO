@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <h1>Frequência das Notas</h1>
+    <p>Digite uma das notas (C, D, E, F, G, A, B): <input type="text" id="numeroInput" /></p>
+    <button onclick="verificarIntervalo()">Verificar</button>
+    <p id="resultado"></p>
+
+    <script>
+        function verificarIntervalo() {
+            // Obtém o valor digitado pelo usuário e converte para maiúsculas
+            let numero = document.getElementById("numeroInput").value.toUpperCase();
+
+            // Verifica em qual intervalo o número se encontra usando switch
+            let mensagem;
+
+            switch (numero) {
+                case 'C':
+                    mensagem = "Frequência de 17.32 Hz";
+                    break;
+                case 'D':
+                    mensagem = "Frequência de 19.44 Hz";
+                    break;
+                case 'E':
+                    mensagem = "Frequência de 20.60 Hz";
+                    break;
+                case 'F':
+                    mensagem = "Frequência de 23.12 Hz";
+                    break;
+                case 'G':
+                    mensagem = "Frequência de 25.95 Hz";
+                    break;
+                case 'A':
+                    mensagem = "Frequência de 29.13 Hz";
+                    break;
+                case 'B':
+                    mensagem = "Frequência de 30.86 Hz";
+                    break;
+                default:
+                    mensagem = "Entrada inválida.";
+            }
+
+            // Exibe a mensagem no corpo da página
+            document.getElementById("resultado").textContent = mensagem;
+        }
+    </script>
+</body>
+</html>
